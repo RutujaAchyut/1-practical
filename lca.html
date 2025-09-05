@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cuisine Portfolio - Rutuja</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: url('https://t3.ftcdn.net/jpg/02/52/12/40/360_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      position: relative;
+    }
+
+    /* Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Menu Grid */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h2 {
+      font-family: 'Playfair Display', serif;
+      color: #e85d04;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff7e5f;
+      color: white;
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🍴 World Cuisine Photography 🍴</h1>
+    <p>A Portfolio of Global Food Cultures</p>
+  </header>
+
+  <!-- Menu Portfolio -->
+  <div class="menu-container">
+
+    <!-- Italian Cuisine -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsgZcnwHV3xHd9WW9bE2DONum3m4lHc-EKqQ&s" alt="Italian Pasta">
+      <div class="card-content">
+        <h2>Italian</h2>
+        <p>Authentic pasta, pizza, and Mediterranean flavors captured through vibrant photography.</p>
+      </div>
+    </div>
+
+    <!-- Indian Cuisine -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxa7JfqO3EaPKyw7DOlOFIADBQ8Y-FP7MfLw&s" alt="Indian Food">
+      <div class="card-content">
+        <h2>Indian</h2>
+        <p>Rich spices, colorful curries, and diverse dishes representing India’s food heritage.</p>
+      </div>
+    </div>
+
+    <!-- Japanese Cuisine -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdRbJ50Fd2xMB5Q-8drnQ8HZ5D38RgNIEZg&s" alt="Sushi">
+      <div class="card-content">
+        <h2>Japanese</h2>
+        <p>Minimalist yet artistic plates of sushi, ramen, and traditional Japanese delicacies.</p>
+      </div>
+    </div>
+
+    <!-- Mexican Cuisine -->
+    <div class="card">
+      <img src="https://delishglobe.com/wp-content/uploads/2024/10/Tacos.png" alt="Mexican Tacos">
+      <div class="card-content">
+        <h2>Mexican</h2>
+        <p>Bold flavors and vibrant street foods like tacos, enchiladas, and nachos captured in frames.</p>
+      </div>
+    </div>
+
+    <!-- French Cuisine -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lqa3wSR_HFTQEO5BxuDwVj7eccXWwuojug&s" alt="French Pastries">
+      <div class="card-content">
+        <h2>French</h2>
+        <p>Exquisite pastries, croissants, and gourmet fine dining from the land of elegance.</p>
+      </div>
+    </div>
+
+    <!-- Middle Eastern Cuisine -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkFBjG3cyElmIQxUWXu_baRqk32qqZ4Exf0g&s" alt="Middle Eastern Food">
+      <div class="card-content">
+        <h2>Middle Eastern</h2>
+        <p>Falafel, hummus, kebabs, and flavorful platters representing Middle Eastern traditions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>📸 Photography Portfolio | By: <b>Rutuja Achyut</b></p>
+  </footer>
+</body>
+</html>
